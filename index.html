@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quản lý Hồ sơ</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body class="system-auth-pending">
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+    <h2>📂 Quản lý Hồ sơ</h2>
+
+    <ul class="menu">
+
+        <li onclick="testBack4AppConnection()">
+            🧪 Test Back4App
+        </li>
+
+        <li onclick="loadPage('dashboard')">
+            📊 Dashboard
+        </li>
+
+        <li onclick="loadPage('project')">
+            🏗 Dự án
+        </li>
+
+        <li onclick="loadPage('supplier')">
+            🏢 Nhà cung cấp
+        </li>
+        
+        
+        <li onclick="loadPage('letter')">
+            📨 Quản lý thư
+        </li>
+
+        <!-- MENU HỒ SƠ -->
+
+        <li>
+
+            <div class="menu-header"
+                 onclick="toggleMenu('hosoMenu', this)">
+
+                <span>📂 Hồ sơ</span>
+
+                <span class="arrow">▶</span>
+
+            </div>
+
+            <ul id="hosoMenu" class="submenu">
+
+    <li onclick="selectMenu(this); loadPage('dossier')">
+        Danh sách hồ sơ
+    </li>
+
+    <li onclick="selectMenu(this); loadPage('dossier_missing')">
+        Hồ sơ cần bổ sung
+    </li>
+
+    <li onclick="selectMenu(this); loadPage('dossier_delivery')">
+        Đã bàn giao
+    </li>
+
+    <li onclick="selectMenu(this); loadPage('dossier_paid')">
+        Đã thanh toán
+    </li>
+
+    <li onclick="selectMenu(this); loadPage('dossier_archive')">
+        📦 Lưu hồ sơ
+    </li>
+
+
+</ul>
+<li onclick="selectMenu(this); loadPage('backup')">
+    💾 Sao lưu dữ liệu
+    </li>
+        </li>
+
+    </ul>
+
+</aside>
+
+
+
+    <!-- Nội dung -->
+
+    <main id="content">
+
+    </main>
+
+    <div class="system-user-panel">
+
+    <div class="system-user-info">
+
+        <span class="system-user-icon">
+            👤
+        </span>
+
+        <div>
+
+            <small>
+                Đang đăng nhập
+            </small>
+
+            <strong id="currentSystemUsername">
+                Người dùng
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="system-logout-button"
+        onclick="logoutSystem()"
+    >
+        🚪 Đăng xuất
+    </button>
+
+</div>
+</div>
+
+<!-- 1. Parse SDK -->
+
+<script
+    src="https://unpkg.com/parse/dist/parse.min.js"
+></script>
+
+
+<!-- 2. Back4App config -->
+
+<script
+    src="./js/back4app-config.js"
+></script>
+
+
+<!-- 3. Đăng nhập -->
+
+<script
+    src="./js/auth.js"
+></script>
+
+
+<!-- 4. Các module -->
+
+<script src="./js/supplier.js"></script>
+<script src="./js/project.js"></script>
+<script src="./js/dossier.js"></script>
+<script src="./js/dossier_archive.js"></script>
+<script src="./js/letter.js"></script>
+<script src="./js/dashboard.js"></script>
+<script src="./js/backup.js"></script>
+
+
+<!-- 5. Test Back4App -->
+
+<script src="./js/back4app-test.js"></script>
+
+
+<!-- 6. app.js cuối cùng -->
+
+<script src="./js/app.js"></script>
+
+
+<!-- 7. Kiểm tra đăng nhập -->
+
+<script>
+
+    requireSystemLogin();
+
+</script>

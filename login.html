@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Đăng nhập - Quản lý Hồ sơ
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+</head>
+
+
+<body class="system-login-page">
+
+    <main class="system-login-container">
+
+        <section class="system-login-box">
+
+            <div class="system-login-logo">
+                📁
+            </div>
+
+
+            <h1>
+                Quản lý Hồ sơ
+            </h1>
+
+
+            <p class="system-login-description">
+                Đăng nhập để sử dụng hệ thống
+            </p>
+
+
+            <form
+                id="systemLoginForm"
+                onsubmit="
+                    event.preventDefault();
+                    loginToSystem();
+                "
+            >
+
+                <div class="system-login-field">
+
+                    <label for="loginUsername">
+                        Tên đăng nhập
+                    </label>
+
+                    <input
+                        type="text"
+                        id="loginUsername"
+                        autocomplete="username"
+                        placeholder="Nhập tên đăng nhập"
+                    >
+
+                </div>
+
+
+                <div class="system-login-field">
+
+                    <label for="loginPassword">
+                        Mật khẩu
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        autocomplete="current-password"
+                        placeholder="Nhập mật khẩu"
+                    >
+
+                </div>
+
+
+                <div
+                    id="loginMessage"
+                    class="system-login-message"
+                    aria-live="polite"
+                >
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="system-login-button"
+                >
+                    Đăng nhập
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- 1. Parse SDK -->
+
+    <script
+        src="https://unpkg.com/parse/dist/parse.min.js"
+    ></script>
+
+
+    <!-- 2. Back4App config -->
+
+    <script
+        src="./js/back4app-config.js"
+    ></script>
+
+
+    <!-- 3. Auth -->
+
+    <script
+        src="./js/auth.js"
+    ></script>
+
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function(){
+
+                redirectLoggedInUser();
+
+                document
+                    .getElementById(
+                        "loginUsername"
+                    )
+                    ?.focus();
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

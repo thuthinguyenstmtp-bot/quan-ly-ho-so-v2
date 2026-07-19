@@ -1,0 +1,74 @@
+<h1>Thông tin Nhà cung cấp</h1>
+<div class="toolbar">
+
+
+<input
+
+type="text"
+
+id="searchSupplier"
+
+placeholder="Tìm tên nhà cung cấp...">
+
+
+<button onclick="openSupplierForm()">
++ Thêm NCC
+
+</button>
+
+
+</div>
+
+<div id="supplierForm" class="form-popup">
+
+    <h2>Thêm Nhà cung cấp</h2>
+
+    <label>Tên NCC</label>
+    <input id="supplierName">
+
+    <label>Địa chỉ</label>
+    <input id="supplierAddress">
+
+    <label>Người nhận thư</label>
+    <input id="supplierReceiver">
+
+    <label>Số điện thoại</label>
+    <input id="supplierPhone">
+
+    <br>
+
+    <button onclick="saveSupplier()">
+        Lưu
+    </button>
+
+    <button onclick="closeSupplierForm()">
+        Hủy
+    </button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tên NCC</th>
+
+<th>Địa chỉ</th>
+
+<th>Người nhận</th>
+
+<th>SĐT</th>
+
+<th>Thao tác</th>
+
+</tr>
+
+</thead>
+
+<tbody id="supplierTable">
+
+</tbody>
+
+</table>

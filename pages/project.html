@@ -1,0 +1,125 @@
+<div class="project-page">
+
+    <h1>Quản lý Dự án</h1>
+
+
+    <!-- THANH TÌM KIẾM -->
+    <div class="toolbar">
+
+        <input
+            type="text"
+            id="searchProject"
+            placeholder="Tìm theo tên hoặc địa điểm dự án..."
+            autocomplete="off"
+        >
+
+
+        <button
+            type="button"
+            onclick="openProjectForm()"
+        >
+            + Thêm dự án
+        </button>
+
+    </div>
+
+
+    <!-- FORM THÊM / CHỈNH SỬA DỰ ÁN -->
+    <div
+        id="projectForm"
+        class="form-popup"
+        style="display: none;"
+    >
+
+        <h2 id="projectFormTitle">
+            Thêm dự án
+        </h2>
+
+
+        <div class="form-group">
+
+            <label for="projectName">
+                Tên dự án
+                <span style="color: red;">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="projectName"
+                placeholder="Nhập tên dự án"
+                maxlength="200"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="projectAddress">
+                Địa điểm
+            </label>
+
+            <input
+                type="text"
+                id="projectAddress"
+                placeholder="Nhập địa điểm thực hiện dự án"
+                maxlength="300"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                id="projectSaveButton"
+                onclick="saveProject()"
+            >
+                Lưu dự án
+            </button>
+
+
+            <button
+                type="button"
+                onclick="closeProjectForm()"
+            >
+                Hủy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- BẢNG DANH SÁCH DỰ ÁN -->
+    <div class="table-scroll">
+
+        <table class="data-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Tên dự án</th>
+
+                    <th>Địa điểm</th>
+
+                    <th>Thao tác</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="projectTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

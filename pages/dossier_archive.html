@@ -1,0 +1,476 @@
+<div class="archive-page">
+
+    <div class="archive-header">
+
+        <div>
+
+            <h1>📦 Lưu hồ sơ</h1>
+
+            <p>
+                Quản lý hợp đồng, phụ lục, biên bản và các hồ sơ lưu trữ khác
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="archive-add-button"
+            onclick="openArchiveForm()"
+        >
+            + Thêm hồ sơ lưu
+        </button>
+
+    </div>
+
+
+    <!-- BỘ LỌC -->
+     <div class="archive-toolbar">
+
+    <!-- TÌM KIẾM CHUNG -->
+
+    <input
+        type="text"
+        id="archiveSearch"
+        placeholder="Tìm mã lưu, tên tài liệu, vị trí lưu..."
+        oninput="filterArchiveDossiers()"
+    >
+
+
+    <!-- LOẠI HỒ SƠ -->
+
+    <select
+        id="archiveTypeFilter"
+        onchange="filterArchiveDossiers()"
+    >
+
+        <option value="">
+            Tất cả loại hồ sơ
+        </option>
+
+        <option value="Hợp đồng">
+            Hợp đồng
+        </option>
+
+        <option value="Phụ lục hợp đồng">
+            Phụ lục hợp đồng
+        </option>
+
+        <option value="Biên bản">
+            Biên bản
+        </option>
+
+        <option value="Hóa đơn">
+            Hóa đơn
+        </option>
+
+        <option value="Hồ sơ pháp lý">
+            Hồ sơ pháp lý
+        </option>
+
+        <option value="Khác">
+            Khác
+        </option>
+
+    </select>
+
+
+    <!-- TÌM MÃ HỒ SƠ LIÊN KẾT -->
+
+    <input
+        type="text"
+        id="archiveLinkedDossierFilter"
+        list="archiveDossierFilterList"
+        placeholder="Tìm mã hồ sơ liên kết..."
+        oninput="filterArchiveDossiers()"
+        autocomplete="off"
+    >
+
+    <datalist id="archiveDossierFilterList">
+    </datalist>
+
+
+    <!-- LỌC THEO BỘ MÃ -->
+
+    <select
+        id="archiveCodeGroupFilter"
+        onchange="filterArchiveDossiers()"
+    >
+
+        <option value="">
+            Tất cả bộ mã hồ sơ
+        </option>
+
+    </select>
+
+
+    <!-- LỌC DỰ ÁN -->
+
+    <select
+        id="archiveProjectFilter"
+        onchange="filterArchiveDossiers()"
+    >
+
+        <option value="">
+            Tất cả dự án
+        </option>
+
+    </select>
+
+
+    <!-- TÌM NHÀ CUNG CẤP -->
+
+    <input
+        type="text"
+        id="archiveSupplierSearchFilter"
+        list="archiveSupplierFilterList"
+        placeholder="Tìm mã hoặc tên nhà cung cấp..."
+        oninput="filterArchiveDossiers()"
+        autocomplete="off"
+    >
+
+    <datalist id="archiveSupplierFilterList">
+    </datalist>
+
+
+    <button
+        type="button"
+        class="archive-reset-button"
+        onclick="resetArchiveFilters()"
+    >
+        Xóa lọc
+    </button>
+
+</div>
+
+
+
+    <div class="archive-result-row">
+
+        <span id="archiveResultCount">
+            0 hồ sơ
+        </span>
+
+    </div>
+
+
+    <!-- BẢNG -->
+
+    <div class="archive-table-scroll">
+
+        <table class="data-table archive-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Loại hồ sơ</th>
+
+                    <th>Số / Mã lưu</th>
+
+                    <th>Mã HS liên kết</th>
+
+                    <th>Tên tài liệu</th>
+
+                    <th>Dự án</th>
+
+                    <th>Nhà cung cấp</th>
+
+                    <th>Ngày lưu</th>
+
+                    <th>Vị trí lưu</th>
+
+                    <th>Số lượng</th>
+
+                    <th>Thao tác</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="archiveTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- POPUP THÊM / SỬA -->
+
+    <div
+        id="archiveModal"
+        class="archive-modal"
+        onclick="closeArchiveForm()"
+    >
+
+        <div
+            class="archive-modal-box"
+            onclick="event.stopPropagation()"
+        >
+
+            <div class="archive-modal-header">
+
+                <h2 id="archiveFormTitle">
+                    Thêm hồ sơ lưu
+                </h2>
+
+                <button
+                    type="button"
+                    class="archive-close-button"
+                    onclick="closeArchiveForm()"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="archive-modal-body">
+
+                <div class="archive-form-grid">
+
+                    <div class="archive-field">
+
+                        <label for="archiveType">
+                            Loại hồ sơ
+                            <span>*</span>
+                        </label>
+
+                        <select id="archiveType">
+
+                            <option value="">
+                                -- Chọn loại hồ sơ --
+                            </option>
+
+                            <option value="Hợp đồng">
+                                Hợp đồng
+                            </option>
+
+                            <option value="Phụ lục hợp đồng">
+                                Phụ lục hợp đồng
+                            </option>
+
+                            <option value="Biên bản">
+                                Biên bản
+                            </option>
+
+                            <option value="Hóa đơn">
+                                Hóa đơn
+                            </option>
+
+                            <option value="Hồ sơ pháp lý">
+                                Hồ sơ pháp lý
+                            </option>
+
+                            <option value="Khác">
+                                Khác
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="archive-field">
+
+                        <label for="archiveCode">
+                            Số / Mã hồ sơ
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="archiveCode"
+                            placeholder="Ví dụ: HĐ-001/2026"
+                        >
+
+                    </div>
+
+
+                    <div class="archive-field archive-full-width">
+
+                        <label for="archiveName">
+                            Tên tài liệu / Nội dung
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="archiveName"
+                            placeholder="Ví dụ: Hợp đồng cung cấp thiết bị"
+                        >
+
+                    </div>
+
+<!-- GẮN VỚI MÃ HỒ SƠ -->
+
+<div class="archive-field archive-full-width">
+
+    <label for="archiveLinkedDossierSearch">
+        Gắn với mã hồ sơ
+    </label>
+
+    <input
+        type="text"
+        id="archiveLinkedDossierSearch"
+        list="archiveDossierList"
+        placeholder="Gõ mã HS, nội dung hoặc tên nhà cung cấp..."
+        oninput="handleArchiveDossierLinkChange()"
+        autocomplete="off"
+    >
+
+    <datalist id="archiveDossierList">
+    </datalist>
+
+    <input
+        type="hidden"
+        id="archiveLinkedDossierId"
+    >
+
+    <small class="archive-field-note">
+        Khi chọn đúng mã hồ sơ, Dự án và Nhà cung cấp sẽ tự động được điền.
+    </small>
+
+</div>
+
+
+<!-- DỰ ÁN -->
+
+<div class="archive-field">
+
+    <label for="archiveProject">
+        Dự án
+    </label>
+
+    <select id="archiveProject">
+
+        <option value="">
+            -- Không liên kết dự án --
+        </option>
+
+    </select>
+
+</div>
+
+
+<!-- NHÀ CUNG CẤP -->
+
+<div class="archive-field">
+
+    <label for="archiveSupplierSearch">
+        Nhà cung cấp
+    </label>
+
+    <input
+        type="text"
+        id="archiveSupplierSearch"
+        list="archiveSupplierList"
+        placeholder="Gõ mã hoặc tên nhà cung cấp..."
+        oninput="handleArchiveSupplierSearchChange()"
+        autocomplete="off"
+    >
+
+    <datalist id="archiveSupplierList">
+    </datalist>
+
+    <input
+        type="hidden"
+        id="archiveSupplierId"
+    >
+
+</div>
+
+
+                    <div class="archive-field">
+
+                        <label for="archiveDate">
+                            Ngày lưu
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="date"
+                            id="archiveDate"
+                        >
+
+                    </div>
+
+
+                    <div class="archive-field">
+
+                        <label for="archiveLocation">
+                            Vị trí lưu
+                        </label>
+
+                        <input
+                            type="text"
+                            id="archiveLocation"
+                            placeholder="Ví dụ: Tủ A - Kệ 2 - Hộp 03"
+                        >
+
+                    </div>
+
+
+                    <div class="archive-field">
+
+                        <label for="archiveQuantity">
+                            Số lượng
+                        </label>
+
+                        <input
+                            type="number"
+                            id="archiveQuantity"
+                            value="1"
+                            min="1"
+                        >
+
+                    </div>
+
+
+                    <div class="archive-field archive-full-width">
+
+                        <label for="archiveNote">
+                            Ghi chú
+                        </label>
+
+                        <textarea
+                            id="archiveNote"
+                            rows="3"
+                            placeholder="Nhập ghi chú bổ sung"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="archive-modal-footer">
+
+                <button
+                    type="button"
+                    class="archive-cancel-button"
+                    onclick="closeArchiveForm()"
+                >
+                    Hủy
+                </button>
+
+                <button
+                    type="button"
+                    class="archive-save-button"
+                    onclick="saveArchiveDossier()"
+                >
+                    Lưu hồ sơ
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,485 @@
+<div class="dossier-page">
+
+    <h1>Quản lý Hồ sơ</h1>
+
+
+    <!-- =================================
+         THANH TÌM KIẾM VÀ BỘ LỌC
+         ================================= -->
+
+    <div class="toolbar dossier-toolbar">
+
+        <input
+            type="text"
+            id="searchDossier"
+            placeholder="Tìm mã HS, dự án, nội dung, nhà cung cấp..."
+            autocomplete="off"
+        >
+
+
+        <select id="filterStatus">
+
+            <option value="">
+                Tất cả trạng thái hồ sơ
+            </option>
+
+            <option value="Chưa duyệt">
+                Chưa duyệt
+            </option>
+
+            <option value="Đã duyệt">
+                Đã duyệt
+            </option>
+
+        </select>
+
+
+        <select id="filterPayment">
+
+            <option value="">
+                Tất cả thanh toán
+            </option>
+
+            <option value="Chưa thanh toán">
+                Chưa thanh toán
+            </option>
+
+            <option value="Đã xuất ĐNTT">
+                Đã xuất ĐNTT
+            </option>
+
+            <option value="Đang xử lý">
+                Đang xử lý
+            </option>
+
+            <option value="Đã thanh toán">
+                Đã thanh toán
+            </option>
+
+        </select>
+
+
+        <select id="filterDelivery">
+
+            <option value="">
+                Tất cả bàn giao
+            </option>
+
+            <option value="done">
+                Đã bàn giao
+            </option>
+
+            <option value="not">
+                Chưa bàn giao
+            </option>
+
+        </select>
+
+        <select id="filterFile">
+
+    <option value="">
+        Tất cả File HS
+    </option>
+
+    <option value="Đã up">
+        Đã up
+    </option>
+
+    <option value="Chưa up">
+        Chưa up
+    </option>
+
+</select>
+
+
+        <button
+            type="button"
+            onclick="openDossierForm()"
+        >
+            + Thêm Hồ sơ
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         FORM THÊM / CHỈNH SỬA HỒ SƠ
+         ================================= -->
+
+    <div
+        id="dossierForm"
+        class="form-popup dossier-form-popup"
+        style="display: none;"
+    >
+
+        <div class="dossier-form-header">
+
+            <h2 id="dossierFormTitle">
+                Thêm Hồ sơ
+            </h2>
+
+        </div>
+
+
+        <!-- THÔNG TIN CHUNG -->
+
+        <div class="dossier-form-section">
+
+            <h3>Thông tin chung</h3>
+
+
+            <div class="dossier-form-grid">
+
+                <div class="form-group">
+
+                    <label for="dossierCode">
+
+                        Mã hồ sơ
+
+                        <span class="required-mark">*</span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="dossierCode"
+                        placeholder="Ví dụ: HS001"
+                        maxlength="100"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="dossierProject">
+
+                        Dự án
+
+                        <span class="required-mark">*</span>
+
+                    </label>
+
+                    <select id="dossierProject">
+
+                        <option value="">
+                            -- Chọn dự án --
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="dossierSupplier">
+
+                        Nhà cung cấp
+
+                        <span class="required-mark">*</span>
+
+                    </label>
+
+                    <select id="dossierSupplier">
+
+                        <option value="">
+                            -- Chọn nhà cung cấp --
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="dossierValue">
+                        Giá trị hợp đồng
+                    </label>
+
+                    <input
+                        type="number"
+                        id="dossierValue"
+                        placeholder="Nhập giá trị"
+                        min="0"
+                        step="1000"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+
+                <div class="form-group dossier-full-width">
+
+                    <label for="dossierContent">
+
+                        Nội dung hồ sơ
+
+                        <span class="required-mark">*</span>
+
+                    </label>
+
+                    <textarea
+                        id="dossierContent"
+                        rows="3"
+                        maxlength="1000"
+                        placeholder="Nhập nội dung hồ sơ hoặc hợp đồng"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TÌNH TRẠNG TÀI LIỆU -->
+
+        <div class="dossier-form-section">
+
+            <h3>Tình trạng tài liệu</h3>
+
+
+            <div class="dossier-form-grid">
+
+                <div class="form-group dossier-full-width">
+
+                    <label for="additionalDocuments">
+                        Hồ sơ cần bổ sung
+                    </label>
+
+                    <textarea
+                        id="additionalDocuments"
+                        rows="3"
+                        maxlength="1000"
+                        placeholder="Ví dụ: Hợp đồng, hóa đơn, biên bản nghiệm thu..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="fileStatus">
+                        Tình trạng file hồ sơ
+                    </label>
+
+                    <select id="fileStatus">
+
+                        <option value="Chưa up">
+                            Chưa up
+                        </option>
+
+                        <option value="Đã up">
+                            Đã up
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            id="paymentRequest"
+                        >
+
+                        Đã lập đề nghị thanh toán
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NGÀY VÀ TRẠNG THÁI -->
+
+        <div class="dossier-form-section">
+
+            <h3>Ngày và trạng thái xử lý</h3>
+
+
+            <div class="dossier-form-grid">
+
+                <div class="form-group">
+
+                    <label for="receiveDate">
+                        Ngày nhận hồ sơ
+                    </label>
+
+                    <input
+                        type="date"
+                        id="receiveDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="deliveryDate">
+                        Ngày bàn giao
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deliveryDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="dossierStatus">
+                        Trạng thái hồ sơ
+                    </label>
+
+                    <select id="dossierStatus">
+
+                        <option value="Chưa duyệt">
+                            Chưa duyệt
+                        </option>
+
+                        <option value="Đã duyệt">
+                            Đã duyệt
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="paymentStatus">
+                        Trạng thái thanh toán
+                    </label>
+
+                    <select id="paymentStatus">
+
+                        <option value="Chưa thanh toán">
+                            Chưa thanh toán
+                        </option>
+
+                        <option value="Đã xuất ĐNTT">
+                            Đã xuất ĐNTT
+                        </option>
+
+                        <option value="Đang xử lý">
+                            Đang xử lý
+                        </option>
+
+                        <option value="Đã thanh toán">
+                            Đã thanh toán
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group dossier-full-width">
+
+                    <label for="note">
+                        Ghi chú
+                    </label>
+
+                    <textarea
+                        id="note"
+                        rows="4"
+                        maxlength="1500"
+                        placeholder="Nhập ghi chú hoặc thông tin cần theo dõi"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NÚT FORM -->
+
+        <div class="form-actions dossier-form-actions">
+
+            <button
+                type="button"
+                id="dossierSaveButton"
+                onclick="saveDossier()"
+            >
+                Lưu Hồ sơ
+            </button>
+
+
+            <button
+                type="button"
+                onclick="closeDossierForm()"
+            >
+                Hủy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         BẢNG DANH SÁCH HỒ SƠ
+         ================================= -->
+
+    <div class="table-scroll dossier-table-scroll">
+
+        <table class="data-table dossier-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Mã HS</th>
+
+                    <th>Dự án</th>
+
+                    <th>Nội dung</th>
+
+                    <th>Nhà cung cấp</th>
+
+                    <th>Giá trị</th>
+
+                    <th>Bổ sung HS</th>
+
+                    <th>File HS</th>
+
+                    <th>Trạng thái HS</th>
+
+                    <th>ĐNTT</th>
+
+                    <th>Bàn giao</th>
+
+                    <th>Thanh toán</th>
+
+                    <th>Thao tác</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="dossierTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

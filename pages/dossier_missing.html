@@ -1,0 +1,143 @@
+<div class="missing-page">
+
+    <h1>📌 Hồ sơ cần bổ sung</h1>
+
+
+    <!-- BỘ LỌC -->
+
+    <div class="missing-toolbar">
+
+        <input
+            type="text"
+            id="missingSearch"
+            class="missing-search"
+            placeholder="Tìm mã HS, dự án, nội dung, NCC..."
+            oninput="filterMissingDossier()"
+        >
+
+
+        <select
+            id="missingProjectFilter"
+            onchange="filterMissingDossier()"
+        >
+            <option value="">
+                Tất cả dự án
+            </option>
+        </select>
+
+
+        <select
+            id="missingSupplierFilter"
+            onchange="filterMissingDossier()"
+        >
+            <option value="">
+                Tất cả nhà cung cấp
+            </option>
+        </select>
+
+
+        <select
+            id="missingDeliveryFilter"
+            onchange="filterMissingDossier()"
+        >
+            <option value="">
+                Tất cả bàn giao
+            </option>
+
+            <option value="done">
+                Đã bàn giao
+            </option>
+
+            <option value="not">
+                Chưa bàn giao
+            </option>
+        </select>
+
+
+        <select
+            id="missingPaymentFilter"
+            onchange="filterMissingDossier()"
+        >
+            <option value="">
+                Tất cả thanh toán
+            </option>
+
+            <option value="Chưa thanh toán">
+                Chưa thanh toán
+            </option>
+
+            <option value="Đã xuất ĐNTT">
+                Đã xuất ĐNTT
+            </option>
+
+            <option value="Đang xử lý">
+                Đang xử lý
+            </option>
+
+            <option value="Đã thanh toán">
+                Đã thanh toán
+            </option>
+        </select>
+
+
+        <button
+            type="button"
+            class="missing-reset-button"
+            onclick="resetMissingDossierFilters()"
+        >
+            Xóa lọc
+        </button>
+
+    </div>
+
+
+    <!-- SỐ KẾT QUẢ -->
+
+    <div class="missing-result-row">
+
+        <span id="missingResultCount">
+            0 hồ sơ
+        </span>
+
+    </div>
+
+
+    <!-- BẢNG -->
+
+    <div class="missing-table-scroll">
+
+        <table class="data-table missing-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Mã HS</th>
+
+                    <th>Dự án</th>
+
+                    <th>Nội dung</th>
+
+                    <th>Nhà cung cấp</th>
+
+                    <th>Giá trị</th>
+
+                    <th>Bổ sung hồ sơ</th>
+
+                    <th>Bàn giao</th>
+
+                    <th>Thanh toán</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="missingTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

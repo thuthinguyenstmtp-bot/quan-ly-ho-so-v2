@@ -1,0 +1,143 @@
+<div class="paid-page">
+
+    <h1>💰 Hồ sơ đã thanh toán</h1>
+
+
+    <!-- BỘ LỌC -->
+
+    <div class="paid-toolbar">
+
+        <input
+            type="text"
+            id="paidSearch"
+            placeholder="Tìm mã HS, dự án, nội dung, NCC..."
+            oninput="filterPaidDossier()"
+        >
+
+
+        <select
+            id="paidProjectFilter"
+            onchange="filterPaidDossier()"
+        >
+
+            <option value="">
+                Tất cả dự án
+            </option>
+
+        </select>
+
+
+        <select
+            id="paidSupplierFilter"
+            onchange="filterPaidDossier()"
+        >
+
+            <option value="">
+                Tất cả nhà cung cấp
+            </option>
+
+        </select>
+
+
+        <select
+            id="paidDeliveryFilter"
+            onchange="filterPaidDossier()"
+        >
+
+            <option value="">
+                Tất cả bàn giao
+            </option>
+
+            <option value="done">
+                Đã bàn giao
+            </option>
+
+            <option value="not">
+                Chưa bàn giao
+            </option>
+
+        </select>
+
+
+        <select
+            id="paidFileFilter"
+            onchange="filterPaidDossier()"
+        >
+
+            <option value="">
+                Tất cả File HS
+            </option>
+
+            <option value="Đã up">
+                Đã up
+            </option>
+
+            <option value="Chưa up">
+                Chưa up
+            </option>
+
+        </select>
+
+
+        <button
+            type="button"
+            class="paid-reset-button"
+            onclick="resetPaidDossierFilters()"
+        >
+            Xóa lọc
+        </button>
+
+    </div>
+
+
+    <!-- ĐẾM KẾT QUẢ -->
+
+    <div class="paid-result-row">
+
+        <span id="paidResultCount">
+            0 hồ sơ
+        </span>
+
+    </div>
+
+
+    <!-- BẢNG -->
+
+    <div class="paid-table-scroll">
+
+        <table class="data-table paid-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Mã HS</th>
+
+                    <th>Dự án</th>
+
+                    <th>Nội dung</th>
+
+                    <th>Nhà cung cấp</th>
+
+                    <th>Giá trị</th>
+
+                    <th>Bổ sung hồ sơ</th>
+
+                    <th>Bàn giao</th>
+
+                    <th>Thanh toán</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="paidTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

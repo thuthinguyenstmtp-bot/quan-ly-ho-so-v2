@@ -1,0 +1,159 @@
+<div class="backup-page">
+
+    <div class="backup-header">
+
+        <div>
+            <h1>💾 Sao lưu dữ liệu</h1>
+
+            <p>
+                Xuất dữ liệu ra file để bảo vệ thông tin và khôi phục khi cần.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- THỐNG KÊ DỮ LIỆU -->
+
+    <div class="backup-summary">
+
+        <div class="backup-summary-card">
+            <span>Nhà cung cấp</span>
+            <strong id="backupSupplierCount">0</strong>
+        </div>
+
+        <div class="backup-summary-card">
+            <span>Dự án</span>
+            <strong id="backupProjectCount">0</strong>
+        </div>
+
+        <div class="backup-summary-card">
+            <span>Hồ sơ</span>
+            <strong id="backupDossierCount">0</strong>
+        </div>
+
+        <div class="backup-summary-card">
+            <span>Thư gửi</span>
+            <strong id="backupLetterCount">0</strong>
+        </div>
+
+        <div class="backup-summary-card">
+            <span>Hồ sơ lưu</span>
+            <strong id="backupArchiveCount">0</strong>
+        </div>
+
+    </div>
+
+
+    <!-- XUẤT DỮ LIỆU -->
+
+    <section class="backup-section">
+
+        <div class="backup-section-icon">
+            ⬇️
+        </div>
+
+        <div class="backup-section-content">
+
+            <h2>Xuất dữ liệu</h2>
+
+            <p>
+                Tải toàn bộ dữ liệu hiện tại về máy dưới dạng file JSON.
+                Bạn nên thực hiện định kỳ hoặc trước khi sửa code lớn.
+            </p>
+
+            <button
+                type="button"
+                class="backup-primary-button"
+                onclick="exportAppBackup()"
+            >
+                Xuất file sao lưu
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- NHẬP DỮ LIỆU -->
+
+    <section class="backup-section">
+
+        <div class="backup-section-icon">
+            ⬆️
+        </div>
+
+        <div class="backup-section-content">
+
+            <h2>Khôi phục dữ liệu</h2>
+
+            <p>
+                Chọn một file sao lưu đã xuất trước đó. Hệ thống sẽ kiểm tra
+                file trước khi cho phép khôi phục.
+            </p>
+
+
+            <div class="backup-file-row">
+
+                <input
+                    type="file"
+                    id="backupFileInput"
+                    accept=".json,application/json"
+                    onchange="previewBackupFile(event)"
+                >
+
+                <button
+                    type="button"
+                    class="backup-secondary-button"
+                    onclick="clearBackupSelection()"
+                >
+                    Bỏ chọn
+                </button>
+
+            </div>
+
+
+            <!-- THÔNG TIN FILE ĐÃ CHỌN -->
+
+            <div
+                id="backupPreview"
+                class="backup-preview"
+            >
+
+                <p class="backup-preview-empty">
+                    Chưa chọn file sao lưu.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="restoreBackupButton"
+                class="backup-danger-button"
+                onclick="restoreAppBackup()"
+                disabled
+            >
+                Khôi phục dữ liệu
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- LƯU Ý -->
+
+    <div class="backup-warning">
+
+        <strong>⚠️ Lưu ý:</strong>
+
+        <p>
+            Khi khôi phục, dữ liệu hiện tại sẽ được thay bằng dữ liệu trong
+            file sao lưu. Hệ thống sẽ tự động xuất một bản sao lưu hiện tại
+            trước khi tiến hành khôi phục.
+        </p>
+
+    </div>
+
+</div>

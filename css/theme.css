@@ -1,0 +1,3171 @@
+/* =====================================================
+   THEME.CSS
+   HỆ THỐNG CHỦ ĐỀ CHO ỨNG DỤNG QUẢN LÝ HỒ SƠ
+   ===================================================== */
+
+
+/* =====================================================
+   1. CHỦ ĐỀ MẶC ĐỊNH: OCEAN BLUE
+   ===================================================== */
+
+:root,
+
+/* =====================================================
+   CHỦ ĐỀ SAGE GARDEN
+   ===================================================== */
+
+body.theme-sage {
+    --app-background: #f4f7f2;
+    --app-card: #ffffff;
+    --app-card-soft: #edf3eb;
+
+    --app-primary: #718c73;
+    --app-primary-hover: #58705b;
+    --app-primary-light: #dfe9dc;
+
+    --app-text: #28362b;
+    --app-text-muted: #718078;
+
+    --app-border: #d7e2d5;
+    --app-border-strong: #bdcdbc;
+
+    --app-sidebar: #354a3b;
+    --app-sidebar-dark: #26372c;
+    --app-sidebar-text: #f7faf6;
+    --app-sidebar-muted: #c2d1c3;
+
+    --app-danger: #c96b6b;
+    --app-success: #64926e;
+    --app-warning: #d6a45c;
+
+    --app-table-header: #718c73;
+    --app-table-header-text: #ffffff;
+
+    --app-shadow:
+        0 12px 30px rgba(58, 78, 62, 0.09);
+
+    --app-primary-shadow:
+        0 8px 18px rgba(113, 140, 115, 0.25);
+}
+
+body.theme-ocean {
+    --app-background: #f4f7fb;
+    --app-card: #ffffff;
+    --app-card-soft: #eef5ff;
+
+    --app-primary: #2563eb;
+    --app-primary-hover: #1d4ed8;
+    --app-primary-light: #dbeafe;
+
+    --app-text: #0f172a;
+    --app-text-muted: #64748b;
+
+    --app-border: #dbe3ef;
+    --app-border-strong: #cbd5e1;
+
+    --app-sidebar: #1e293b;
+    --app-sidebar-dark: #111827;
+    --app-sidebar-text: #f8fafc;
+    --app-sidebar-muted: #94a3b8;
+
+    --app-danger: #dc2626;
+    --app-success: #16a34a;
+    --app-warning: #f59e0b;
+
+    --app-table-header: #2563eb;
+    --app-table-header-text: #ffffff;
+
+    --app-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.08);
+
+    --app-primary-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   2. CHỦ ĐỀ EMERALD
+   ===================================================== */
+
+body.theme-emerald {
+    --app-background: #f3f8f6;
+    --app-card: #ffffff;
+    --app-card-soft: #ecfdf5;
+
+    --app-primary: #059669;
+    --app-primary-hover: #047857;
+    --app-primary-light: #d1fae5;
+
+    --app-text: #102a24;
+    --app-text-muted: #64746f;
+
+    --app-border: #d6e9e2;
+    --app-border-strong: #b9d8cd;
+
+    --app-sidebar: #16372f;
+    --app-sidebar-dark: #0f2923;
+    --app-sidebar-text: #f0fdf4;
+    --app-sidebar-muted: #a7f3d0;
+
+    --app-danger: #dc2626;
+    --app-success: #16a34a;
+    --app-warning: #d97706;
+
+    --app-table-header: #059669;
+    --app-table-header-text: #ffffff;
+
+    --app-shadow:
+        0 10px 28px rgba(5, 150, 105, 0.10);
+
+    --app-primary-shadow:
+        0 8px 18px rgba(5, 150, 105, 0.24);
+}
+
+
+/* =====================================================
+   3. CHỦ ĐỀ VIOLET
+   ===================================================== */
+
+body.theme-violet {
+    --app-background: #f7f5fc;
+    --app-card: #ffffff;
+    --app-card-soft: #f3e8ff;
+
+    --app-primary: #7c3aed;
+    --app-primary-hover: #6d28d9;
+    --app-primary-light: #ede9fe;
+
+    --app-text: #241633;
+    --app-text-muted: #746580;
+
+    --app-border: #e4d9ef;
+    --app-border-strong: #d3c2e3;
+
+    --app-sidebar: #302048;
+    --app-sidebar-dark: #1f1533;
+    --app-sidebar-text: #faf5ff;
+    --app-sidebar-muted: #d8b4fe;
+
+    --app-danger: #dc2626;
+    --app-success: #16a34a;
+    --app-warning: #d97706;
+
+    --app-table-header: #7c3aed;
+    --app-table-header-text: #ffffff;
+
+    --app-shadow:
+        0 10px 28px rgba(124, 58, 237, 0.10);
+
+    --app-primary-shadow:
+        0 8px 18px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =====================================================
+   4. CHỦ ĐỀ DARK
+   ===================================================== */
+
+body.theme-dark {
+    --app-background: #0f172a;
+    --app-card: #172033;
+    --app-card-soft: #1e293b;
+
+    --app-primary: #3b82f6;
+    --app-primary-hover: #60a5fa;
+    --app-primary-light: #1e3a5f;
+
+    --app-text: #f8fafc;
+    --app-text-muted: #a8b3c7;
+
+    --app-border: #334155;
+    --app-border-strong: #475569;
+
+    --app-sidebar: #0b1120;
+    --app-sidebar-dark: #020617;
+    --app-sidebar-text: #f8fafc;
+    --app-sidebar-muted: #94a3b8;
+
+    --app-danger: #ef4444;
+    --app-success: #22c55e;
+    --app-warning: #f59e0b;
+
+    --app-table-header: #1e40af;
+    --app-table-header-text: #ffffff;
+
+    --app-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.35);
+
+    --app-primary-shadow:
+        0 8px 18px rgba(59, 130, 246, 0.28);
+
+    color-scheme: dark;
+}
+
+
+/* =====================================================
+   5. NỀN VÀ CHỮ TOÀN ỨNG DỤNG
+   ===================================================== */
+
+html,
+body {
+    background:
+        var(--app-background) !important;
+
+    color:
+        var(--app-text) !important;
+}
+
+
+body {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.main-content,
+.content,
+.content-area,
+.page-content,
+#mainContent,
+#pageContent,
+.dossier-page {
+    background:
+        var(--app-background) !important;
+
+    color:
+        var(--app-text) !important;
+}
+
+
+/* =====================================================
+   6. SIDEBAR
+   ===================================================== */
+
+.sidebar {
+    background:
+        linear-gradient(
+            180deg,
+            var(--app-sidebar) 0%,
+            var(--app-sidebar-dark) 100%
+        ) !important;
+
+    color:
+        var(--app-sidebar-text) !important;
+}
+
+
+.sidebar a,
+.sidebar button,
+.sidebar span,
+.sidebar p,
+.sidebar .menu-item,
+.sidebar .submenu-item {
+    color:
+        var(--app-sidebar-text);
+}
+
+
+.sidebar .menu-item:hover,
+.sidebar .submenu-item:hover,
+.sidebar a:hover {
+    background:
+        rgba(255, 255, 255, 0.08) !important;
+}
+
+
+.sidebar .active,
+.sidebar a.active,
+.sidebar .menu-item.active,
+.sidebar .submenu-item.active {
+    background:
+        var(--app-primary) !important;
+
+    color:
+        #ffffff !important;
+
+    box-shadow:
+        var(--app-primary-shadow) !important;
+}
+
+
+/* =====================================================
+   7. TIÊU ĐỀ TRANG
+   ===================================================== */
+
+.dossier-page-header h1,
+.page-header h1,
+h1,
+h2,
+h3 {
+    color:
+        var(--app-text);
+}
+
+
+.dossier-page-header p,
+.page-header p {
+    color:
+        var(--app-text-muted) !important;
+}
+
+
+/* =====================================================
+   8. CARD, TOOLBAR VÀ POPUP
+   ===================================================== */
+
+.dossier-toolbar,
+.dossier-table-card,
+.dossier-form-popup,
+.card,
+.panel {
+    background:
+        var(--app-card) !important;
+
+    border-color:
+        var(--app-border) !important;
+
+    box-shadow:
+        var(--app-shadow) !important;
+}
+
+
+.dossier-toolbar,
+.dossier-table-card,
+.dossier-form-popup {
+    border-radius:
+        12px !important;
+}
+
+
+/* =====================================================
+   9. INPUT, SELECT VÀ TEXTAREA
+   ===================================================== */
+
+input,
+select,
+textarea {
+    background:
+        var(--app-card) !important;
+
+    color:
+        var(--app-text) !important;
+
+    border-color:
+        var(--app-border-strong) !important;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color:
+        var(--app-text-muted) !important;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color:
+        var(--app-primary) !important;
+
+    outline:
+        none !important;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.14) !important;
+}
+
+
+body.theme-emerald input:focus,
+body.theme-emerald select:focus,
+body.theme-emerald textarea:focus {
+    box-shadow:
+        0 0 0 3px rgba(5, 150, 105, 0.14) !important;
+}
+
+
+body.theme-violet input:focus,
+body.theme-violet select:focus,
+body.theme-violet textarea:focus {
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.14) !important;
+}
+
+
+/* =====================================================
+   10. NÚT CHÍNH
+   ===================================================== */
+
+.dossier-add-button,
+.dossier-save-button,
+.dossier-bulk-apply,
+.primary-button,
+.btn-primary {
+    background:
+        var(--app-primary) !important;
+
+    color:
+        #ffffff !important;
+
+    border:
+        none !important;
+
+    box-shadow:
+        var(--app-primary-shadow) !important;
+}
+
+
+.dossier-add-button:hover,
+.dossier-save-button:hover,
+.dossier-bulk-apply:hover,
+.primary-button:hover,
+.btn-primary:hover {
+    background:
+        var(--app-primary-hover) !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =====================================================
+   11. NÚT PHỤ
+   ===================================================== */
+
+.dossier-cancel-button,
+.dossier-bulk-cancel,
+.secondary-button,
+.btn-secondary {
+    background:
+        var(--app-card) !important;
+
+    color:
+        var(--app-text) !important;
+
+    border:
+        1px solid
+        var(--app-border-strong) !important;
+}
+
+
+/* =====================================================
+   12. BẢNG
+   ===================================================== */
+
+.data-table thead th,
+.dossier-table thead th {
+    background:
+        var(--app-table-header) !important;
+
+    color:
+        var(--app-table-header-text) !important;
+
+    border-color:
+        rgba(255, 255, 255, 0.25) !important;
+}
+
+
+.data-table tbody td,
+.dossier-table tbody td {
+    background:
+        var(--app-card) !important;
+
+    color:
+        var(--app-text) !important;
+
+    border-color:
+        var(--app-border) !important;
+}
+
+
+.data-table tbody tr:hover td,
+.dossier-table tbody tr:hover td {
+    background:
+        var(--app-card-soft) !important;
+}
+
+
+/* =====================================================
+   13. THANH CẬP NHẬT HÀNG LOẠT
+   ===================================================== */
+
+.dossier-bulk-bar {
+    background:
+        var(--app-primary-light) !important;
+
+    border-color:
+        var(--app-border-strong) !important;
+}
+
+
+.dossier-bulk-count {
+    color:
+        var(--app-primary-hover) !important;
+}
+
+
+/* =====================================================
+   14. POPUP
+   ===================================================== */
+
+.dossier-modal-overlay {
+    background:
+        rgba(15, 23, 42, 0.58) !important;
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+.dossier-form-header,
+.dossier-form-section,
+.dossier-form-actions {
+    background:
+        var(--app-card) !important;
+
+    color:
+        var(--app-text) !important;
+
+    border-color:
+        var(--app-border) !important;
+}
+
+
+.dossier-form-section h3 {
+    color:
+        var(--app-primary) !important;
+}
+
+
+/* =====================================================
+   15. NÚT SỬA VÀ XÓA
+   ===================================================== */
+
+.dossier-action-cell button:first-child {
+    background:
+        var(--app-primary) !important;
+
+    color:
+        #ffffff !important;
+
+    border:
+        none !important;
+}
+
+
+.dossier-action-cell button:last-child {
+    background:
+        var(--app-danger) !important;
+
+    color:
+        #ffffff !important;
+
+    border:
+        none !important;
+}
+
+
+/* =====================================================
+   16. CARD TÀI KHOẢN
+   ===================================================== */
+
+.sidebar-user-card,
+.account-panel,
+.account-card,
+.user-card {
+    background:
+        linear-gradient(
+            135deg,
+            var(--app-primary),
+            var(--app-primary-hover)
+        ) !important;
+
+    color:
+        #ffffff !important;
+}
+
+
+/* =====================================================
+   17. THANH CUỘN
+   ===================================================== */
+
+::-webkit-scrollbar {
+    width:
+        9px;
+
+    height:
+        9px;
+}
+
+
+::-webkit-scrollbar-track {
+    background:
+        var(--app-background);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:
+        var(--app-border-strong);
+
+    border-radius:
+        20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        var(--app-primary);
+}
+
+
+/* =====================================================
+   18. HIỆU ỨNG MƯỢT
+   ===================================================== */
+
+button,
+input,
+select,
+textarea,
+.dossier-table tbody td,
+.data-table tbody td,
+.sidebar a,
+.sidebar button {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* =====================================================
+   Ô CHỌN CHỦ ĐỀ TRONG SIDEBAR
+   ===================================================== */
+
+.app-theme-box {
+    margin:
+        12px 14px;
+
+    padding:
+        10px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+
+.app-theme-box label {
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        var(--app-sidebar-muted) !important;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.04em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.app-theme-box select {
+    width:
+        100%;
+
+    height:
+        35px;
+
+    box-sizing:
+        border-box;
+
+    padding:
+        0 8px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16) !important;
+
+    border-radius:
+        7px;
+
+    background:
+        rgba(255, 255, 255, 0.10) !important;
+
+    color:
+        var(--app-sidebar-text) !important;
+
+    font-size:
+        12px;
+
+    cursor:
+        pointer;
+}
+
+
+.app-theme-box select option {
+    background:
+        #ffffff;
+
+    color:
+        #0f172a;
+}
+/* =====================================================
+   NỀN CHỮA LÀNH CHO SAGE GARDEN
+   ===================================================== */
+
+body.theme-sage {
+    background:
+        radial-gradient(
+            circle at 88% 10%,
+            rgba(164, 188, 163, 0.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 12% 88%,
+            rgba(216, 230, 212, 0.32),
+            transparent 30%
+        ),
+        var(--app-background) !important;
+}
+
+
+body.theme-sage .main-content,
+body.theme-sage .content,
+body.theme-sage .page-content,
+body.theme-sage .dossier-page {
+    background:
+        transparent !important;
+}
+/* =====================================================
+   LỜI CHÀO CHỮA LÀNH
+   ===================================================== */
+
+.healing-banner {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-bottom: 14px;
+    padding: 11px 15px;
+
+    border:
+        1px solid
+        var(--app-border);
+
+    border-left:
+        4px solid
+        var(--app-primary);
+
+    border-radius: 12px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--app-primary-light) 58%,
+            var(--app-card)
+        );
+
+    box-shadow:
+        0 6px 18px rgba(58, 78, 62, 0.05);
+}
+
+
+.healing-banner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        var(--app-card);
+
+    font-size: 18px;
+
+    box-shadow:
+        0 4px 12px rgba(58, 78, 62, 0.09);
+}
+
+
+.healing-banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    min-width: 0;
+}
+
+
+.healing-banner-content strong {
+    color:
+        var(--app-text);
+
+    font-size: 13px;
+}
+
+
+.healing-banner-content span {
+    color:
+        var(--app-text-muted);
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+/* =====================================================
+   BADGE TRẠNG THÁI PASTEL
+   ===================================================== */
+
+.dossier-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 100%;
+
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+/* Chưa duyệt */
+
+.dossier-badge-pending {
+    background: #fff2d8;
+    color: #8a6528;
+}
+
+
+/* Đã duyệt */
+
+.dossier-badge-approved {
+    background: #e0efe1;
+    color: #477052;
+}
+
+
+/* Chưa up */
+
+.dossier-badge-file-missing {
+    background: #f5e8e6;
+    color: #955f59;
+}
+
+
+/* Đã up */
+
+.dossier-badge-file-uploaded {
+    background: #e2edf7;
+    color: #4c6e91;
+}
+
+
+/* Chưa thanh toán */
+
+.dossier-badge-unpaid {
+    background: #f3e7dc;
+    color: #88634a;
+}
+
+
+/* Đang xử lý */
+
+.dossier-badge-processing {
+    background: #ebe5f3;
+    color: #6d5b83;
+}
+
+
+/* Đã xuất ĐNTT */
+
+.dossier-badge-requested {
+    background: #e5eef7;
+    color: #4a6986;
+}
+
+
+/* Đã thanh toán */
+
+.dossier-badge-paid {
+    background: #dfeee4;
+    color: #427056;
+}
+
+
+/* Chưa bàn giao */
+
+.dossier-badge-not-delivered {
+    background: #eef0f2;
+    color: #66707a;
+}
+
+
+/* Đã bàn giao */
+
+.dossier-badge-delivered {
+    background: #e3efe7;
+    color: #4b7159;
+}
+
+/* =====================================================
+   TOAST THÔNG BÁO
+   ===================================================== */
+
+.app-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    z-index: 99999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    pointer-events: none;
+}
+
+
+.app-toast {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    min-width: 260px;
+    max-width: 380px;
+
+    padding: 11px 14px;
+
+    border-radius: 11px;
+
+    color: var(--app-text);
+    background: var(--app-card);
+
+    border:
+        1px solid
+        var(--app-border);
+
+    box-shadow:
+        0 14px 35px rgba(38, 55, 43, 0.16);
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    pointer-events: auto;
+
+    animation:
+        appToastIn 0.25s ease;
+}
+
+
+.app-toast-success {
+    border-left:
+        4px solid
+        var(--app-success);
+}
+
+
+.app-toast-error {
+    border-left:
+        4px solid
+        var(--app-danger);
+}
+
+
+.app-toast-info {
+    border-left:
+        4px solid
+        var(--app-primary);
+}
+
+
+.app-toast-icon {
+    flex-shrink: 0;
+
+    font-size: 16px;
+}
+
+
+.app-toast.is-leaving {
+    animation:
+        appToastOut 0.22s ease forwards;
+}
+
+
+@keyframes appToastIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-8px)
+            translateX(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            translateX(0);
+    }
+
+}
+
+
+@keyframes appToastOut {
+
+    from {
+        opacity: 1;
+        transform:
+            translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform:
+            translateX(20px);
+    }
+
+}
+
+/* =====================================================
+   NÚT THAO TÁC PASTEL
+   ===================================================== */
+
+.dossier-action-cell button:first-child {
+    background:
+        #e5edf8 !important;
+
+    color:
+        #426b98 !important;
+
+    box-shadow:
+        none !important;
+}
+
+
+.dossier-action-cell button:last-child {
+    background:
+        #f7e3e3 !important;
+
+    color:
+        #a65e5e !important;
+
+    box-shadow:
+        none !important;
+}
+
+
+.dossier-action-cell button:first-child:hover {
+    background:
+        #ceddf0 !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.dossier-action-cell button:last-child:hover {
+    background:
+        #f0cccc !important;
+
+    transform:
+        translateY(-1px);
+}
+/* =====================================================
+   CARD TÀI KHOẢN THEO THEME SAGE
+   ===================================================== */
+
+body.theme-sage .sidebar-user-card,
+body.theme-sage .account-panel,
+body.theme-sage .account-card,
+body.theme-sage .user-card {
+    background:
+        linear-gradient(
+            135deg,
+            #66836d 0%,
+            #4f6957 100%
+        ) !important;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15) !important;
+
+    box-shadow:
+        0 10px 24px
+        rgba(31, 55, 38, 0.22) !important;
+}
+
+
+body.theme-sage .sidebar-user-card button,
+body.theme-sage .account-panel button,
+body.theme-sage .account-card button,
+body.theme-sage .user-card button {
+    background:
+        rgba(255, 255, 255, 0.12) !important;
+
+    color:
+        #ffffff !important;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25) !important;
+}
+
+
+body.theme-sage .sidebar-user-card button:hover,
+body.theme-sage .account-panel button:hover,
+body.theme-sage .account-card button:hover,
+body.theme-sage .user-card button:hover {
+    background:
+        rgba(255, 255, 255, 0.20) !important;
+}
+/* =====================================================
+   BẢNG SAGE MỀM VÀ DỄ ĐỌC HƠN
+   ===================================================== */
+
+body.theme-sage .dossier-table thead th {
+    background:
+        #748f78 !important;
+
+    border-color:
+        rgba(255, 255, 255, 0.28) !important;
+}
+
+
+body.theme-sage .dossier-table tbody tr:nth-child(even) td {
+    background:
+        #f8faf7 !important;
+}
+
+
+body.theme-sage .dossier-table tbody tr:hover td {
+    background:
+        #eaf2e8 !important;
+}
+
+
+body.theme-sage .dossier-table tbody td {
+    border-color:
+        #dce5da !important;
+}
+/* =====================================================
+   TINH CHỈNH BANNER CHỮA LÀNH
+   ===================================================== */
+
+body.theme-sage .healing-banner {
+    padding:
+        12px 16px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #edf4eb 0%,
+            #f7faf6 100%
+        ) !important;
+
+    border-left:
+        4px solid
+        #718c73 !important;
+}
+
+
+body.theme-sage .healing-banner-content strong {
+    font-size:
+        13px !important;
+
+    color:
+        #344b39 !important;
+}
+
+
+body.theme-sage .healing-banner-content span {
+    font-size:
+        12px !important;
+
+    color:
+        #6c7d71 !important;
+}
+
+
+body.theme-sage .healing-banner-icon {
+    background:
+        #ffffff !important;
+
+    box-shadow:
+        0 5px 14px
+        rgba(72, 101, 77, 0.12) !important;
+}
+/* =====================================================
+   GIỮ CỘT THAO TÁC CỐ ĐỊNH BÊN PHẢI
+   ===================================================== */
+
+.dossier-table th:last-child,
+.dossier-table td:last-child {
+    position:
+        sticky !important;
+
+    right:
+        0 !important;
+
+    z-index:
+        4;
+}
+
+
+.dossier-table th:last-child {
+    background:
+        var(--app-table-header) !important;
+
+    box-shadow:
+        -5px 0 10px
+        rgba(42, 60, 46, 0.08);
+}
+
+
+.dossier-table td:last-child {
+    background:
+        var(--app-card) !important;
+
+    box-shadow:
+        -5px 0 10px
+        rgba(42, 60, 46, 0.06);
+}
+
+
+.dossier-table tbody tr:nth-child(even) td:last-child {
+    background:
+        #f8faf7 !important;
+}
+
+
+.dossier-table tbody tr:hover td:last-child {
+    background:
+        #eaf2e8 !important;
+}
+/* =====================================================
+   HỌA TIẾT NỀN NHẸ
+   ===================================================== */
+
+body.theme-sage .dossier-page {
+    position:
+        relative;
+}
+
+
+body.theme-sage .dossier-page::after {
+    content:
+        "🌿";
+
+    position:
+        fixed;
+
+    right:
+        34px;
+
+    bottom:
+        24px;
+
+    z-index:
+        0;
+
+    font-size:
+        72px;
+
+    opacity:
+        0.035;
+
+    pointer-events:
+        none;
+
+    filter:
+        grayscale(20%);
+}
+
+body.theme-sage .app-theme-box {
+    margin:
+        10px 12px !important;
+
+    padding:
+        9px !important;
+
+    border-radius:
+        9px !important;
+}
+
+
+body.theme-sage .app-theme-box select {
+    height:
+        32px !important;
+
+    font-size:
+        11px !important;
+}
+@keyframes sageFadeUp {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(5px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.healing-banner,
+.dossier-toolbar,
+.dossier-table-card {
+    animation:
+        sageFadeUp 0.35s ease both;
+}
+
+
+.dossier-toolbar {
+    animation-delay:
+        0.04s;
+}
+
+
+.dossier-table-card {
+    animation-delay:
+        0.08s;
+}
+
+/* =====================================================
+   MÀU NỀN ĐỘNG CHO TỪNG CHỦ ĐỀ
+   ===================================================== */
+
+/* Ocean Blue */
+
+body.theme-ocean {
+    --ambient-color-one:
+        rgba(96, 165, 250, 0.24);
+
+    --ambient-color-two:
+        rgba(129, 140, 248, 0.17);
+
+    --ambient-color-three:
+        rgba(45, 212, 191, 0.13);
+
+    --ambient-leaf-color:
+        rgba(37, 99, 235, 0.10);
+}
+
+
+/* Sage Garden */
+
+body.theme-sage {
+    --ambient-color-one:
+        rgba(143, 174, 145, 0.23);
+
+    --ambient-color-two:
+        rgba(204, 221, 195, 0.25);
+
+    --ambient-color-three:
+        rgba(224, 204, 166, 0.13);
+
+    --ambient-leaf-color:
+        rgba(75, 113, 82, 0.12);
+}
+
+
+/* Emerald */
+
+body.theme-emerald {
+    --ambient-color-one:
+        rgba(52, 211, 153, 0.20);
+
+    --ambient-color-two:
+        rgba(45, 212, 191, 0.16);
+
+    --ambient-color-three:
+        rgba(167, 243, 208, 0.18);
+
+    --ambient-leaf-color:
+        rgba(5, 150, 105, 0.11);
+}
+
+
+/* Violet */
+
+body.theme-violet {
+    --ambient-color-one:
+        rgba(167, 139, 250, 0.22);
+
+    --ambient-color-two:
+        rgba(244, 114, 182, 0.13);
+
+    --ambient-color-three:
+        rgba(196, 181, 253, 0.20);
+
+    --ambient-leaf-color:
+        rgba(124, 58, 237, 0.10);
+}
+
+
+/* Dark Mode */
+
+body.theme-dark {
+    --ambient-color-one:
+        rgba(59, 130, 246, 0.15);
+
+    --ambient-color-two:
+        rgba(139, 92, 246, 0.13);
+
+    --ambient-color-three:
+        rgba(20, 184, 166, 0.09);
+
+    --ambient-leaf-color:
+        rgba(148, 163, 184, 0.07);
+}
+/* =====================================================
+   NỀN AMBIENT CHUYỂN ĐỘNG
+   ===================================================== */
+
+html {
+    background:
+        var(--app-background) !important;
+}
+
+
+body {
+    position:
+        relative;
+
+    min-height:
+        100vh;
+
+    overflow-x:
+        hidden;
+
+    isolation:
+        isolate;
+
+    background:
+        transparent !important;
+}
+
+
+/* Cho nền trang trong suốt để nhìn thấy ambient */
+
+.main-content,
+.content,
+.content-area,
+.page-content,
+#mainContent,
+#pageContent,
+.dossier-page {
+    background:
+        transparent !important;
+}
+
+
+/* Lớp nền cố định */
+
+.ambient-background {
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        -1;
+
+    overflow:
+        hidden;
+
+    pointer-events:
+        none;
+
+    background:
+        var(--app-background);
+}
+
+
+/* Các khối màu */
+
+.ambient-blob {
+    position:
+        absolute;
+
+    display:
+        block;
+
+    width:
+        430px;
+
+    height:
+        430px;
+
+    border-radius:
+        50%;
+
+    filter:
+        blur(75px);
+
+    opacity:
+        0.9;
+
+    will-change:
+        transform;
+
+    transform:
+        translate3d(0, 0, 0);
+}
+
+
+/* Khối màu góc trên bên phải */
+
+.ambient-blob-one {
+    top:
+        -150px;
+
+    right:
+        -100px;
+
+    background:
+        var(--ambient-color-one);
+
+    animation:
+        ambientFloatOne
+        18s
+        ease-in-out
+        infinite alternate;
+}
+
+
+/* Khối màu góc dưới bên trái */
+
+.ambient-blob-two {
+    left:
+        5%;
+
+    bottom:
+        -190px;
+
+    width:
+        520px;
+
+    height:
+        520px;
+
+    background:
+        var(--ambient-color-two);
+
+    animation:
+        ambientFloatTwo
+        23s
+        ease-in-out
+        infinite alternate;
+}
+
+
+/* Khối màu giữa trang */
+
+.ambient-blob-three {
+    top:
+        35%;
+
+    right:
+        28%;
+
+    width:
+        350px;
+
+    height:
+        350px;
+
+    background:
+        var(--ambient-color-three);
+
+    animation:
+        ambientFloatThree
+        21s
+        ease-in-out
+        infinite alternate;
+}
+/* =====================================================
+   CHUYỂN ĐỘNG CỦA AMBIENT
+   ===================================================== */
+
+@keyframes ambientFloatOne {
+
+    0% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(
+                -55px,
+                45px,
+                0
+            )
+            scale(1.08);
+    }
+
+    100% {
+        transform:
+            translate3d(
+                -20px,
+                95px,
+                0
+            )
+            scale(0.95);
+    }
+
+}
+
+
+@keyframes ambientFloatTwo {
+
+    0% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate3d(
+                70px,
+                -45px,
+                0
+            )
+            scale(0.94);
+    }
+
+    100% {
+        transform:
+            translate3d(
+                130px,
+                -80px,
+                0
+            )
+            scale(1.06);
+    }
+
+}
+
+
+@keyframes ambientFloatThree {
+
+    0% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(0.92);
+    }
+
+    50% {
+        transform:
+            translate3d(
+                -70px,
+                50px,
+                0
+            )
+            scale(1.08);
+    }
+
+    100% {
+        transform:
+            translate3d(
+                45px,
+                -35px,
+                0
+            )
+            scale(1);
+    }
+
+}
+/* =====================================================
+   CHI TIẾT LÁ TRÔI NHẸ
+   ===================================================== */
+
+.ambient-leaf {
+    position:
+        absolute;
+
+    color:
+        var(--ambient-leaf-color);
+
+    opacity:
+        0.18;
+
+    user-select:
+        none;
+
+    will-change:
+        transform;
+
+    filter:
+        grayscale(35%);
+
+    pointer-events:
+        none;
+}
+
+
+/* Lá góc phải dưới */
+
+.ambient-leaf-one {
+    right:
+        40px;
+
+    bottom:
+        28px;
+
+    font-size:
+        70px;
+
+    animation:
+        ambientLeafOne
+        14s
+        ease-in-out
+        infinite alternate;
+}
+
+
+/* Lá phía giữa bên phải */
+
+.ambient-leaf-two {
+    top:
+        58%;
+
+    right:
+        12%;
+
+    font-size:
+        42px;
+
+    opacity:
+        0.10;
+
+    animation:
+        ambientLeafTwo
+        18s
+        ease-in-out
+        infinite alternate;
+}
+
+
+@keyframes ambientLeafOne {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-7deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(2deg);
+    }
+
+    100% {
+        transform:
+            translateY(-6px)
+            rotate(8deg);
+    }
+
+}
+
+
+@keyframes ambientLeafTwo {
+
+    0% {
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            rotate(10deg);
+    }
+
+    100% {
+        transform:
+            translate3d(
+                -24px,
+                -18px,
+                0
+            )
+            rotate(-8deg);
+    }
+
+}
+/* =====================================================
+   GLASS EFFECT NHẸ
+   ===================================================== */
+
+.dossier-toolbar,
+.healing-banner {
+    background:
+        color-mix(
+            in srgb,
+            var(--app-card) 84%,
+            transparent
+        ) !important;
+
+    backdrop-filter:
+        blur(12px)
+        saturate(120%);
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(120%);
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--app-border) 78%,
+            transparent
+        ) !important;
+
+    box-shadow:
+        0 10px 30px
+        rgba(31, 41, 55, 0.06) !important;
+}
+
+
+/* Bảng vẫn cần rõ nên chỉ trong suốt nhẹ */
+
+.dossier-table-card {
+    background:
+        color-mix(
+            in srgb,
+            var(--app-card) 94%,
+            transparent
+        ) !important;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+}
+/* =====================================================
+   ÁNH SÁNG CHUYỂN ĐỘNG TRÊN BANNER
+   ===================================================== */
+
+.healing-banner {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.healing-banner::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -45%;
+
+    width:
+        35%;
+
+    height:
+        100%;
+
+    pointer-events:
+        none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.30),
+            transparent
+        );
+
+    transform:
+        skewX(-18deg);
+
+    animation:
+        healingBannerShine
+        9s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes healingBannerShine {
+
+    0%,
+    65% {
+        left:
+            -45%;
+    }
+
+    100% {
+        left:
+            125%;
+    }
+
+}
+/* =====================================================
+   NÚT THÊM HỒ SƠ MỀM HƠN
+   ===================================================== */
+
+.dossier-add-button {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.dossier-add-button::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -50%;
+
+    left:
+        -80%;
+
+    width:
+        50%;
+
+    height:
+        200%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+
+    transform:
+        rotate(20deg);
+
+    transition:
+        left 0.6s ease;
+
+    pointer-events:
+        none;
+}
+
+
+.dossier-add-button:hover::after {
+    left:
+        130%;
+}
+
+
+.dossier-add-button:hover {
+    transform:
+        translateY(-2px)
+        scale(1.015);
+
+    box-shadow:
+        0 12px 24px
+        color-mix(
+            in srgb,
+            var(--app-primary) 28%,
+            transparent
+        ) !important;
+}
+/* =====================================================
+   HOVER HÀNG BẢNG
+   ===================================================== */
+
+.dossier-table tbody tr {
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.dossier-table tbody tr:hover {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 5px 14px
+        rgba(31, 41, 55, 0.07);
+}
+
+
+.dossier-table tbody tr:hover td {
+    background:
+        color-mix(
+            in srgb,
+            var(--app-primary-light) 38%,
+            var(--app-card)
+        ) !important;
+}
+/* =====================================================
+   HỖ TRỢ GIẢM CHUYỂN ĐỘNG
+   ===================================================== */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    .ambient-blob,
+    .ambient-leaf,
+    .healing-banner::after {
+        animation:
+            none !important;
+    }
+
+
+    button,
+    .dossier-table tbody tr {
+        transition:
+            none !important;
+    }
+
+}
+/* =====================================================
+   SỬA POPUP BỊ BẢNG CHE
+   ===================================================== */
+
+/* Các phần bình thường của trang */
+.dossier-page > *:not(.dossier-modal-overlay) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Popup phải luôn nằm trên mọi thành phần */
+.dossier-modal-overlay {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    z-index: 99999 !important;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    background:
+        rgba(15, 23, 42, 0.58) !important;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+
+/* Khi mở popup */
+.dossier-modal-overlay.is-open {
+    display: flex !important;
+}
+
+
+/* Nội dung form */
+.dossier-form-popup {
+    position: relative !important;
+    z-index: 100000 !important;
+
+    width: min(920px, 96vw);
+    max-height: 90vh;
+
+    margin: auto;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background:
+        var(--app-card) !important;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 24px 70px
+        rgba(15, 23, 42, 0.28) !important;
+}
+
+
+/* Bảng không được tạo lớp cao hơn popup */
+.dossier-table-card,
+.dossier-toolbar,
+.healing-banner {
+    z-index: 1 !important;
+}
+
+
+/* Sticky của bảng chỉ hoạt động trong bảng */
+.dossier-table th:last-child {
+    z-index: 4 !important;
+}
+
+.dossier-table td:last-child {
+    z-index: 3 !important;
+}
+
+
+/* Khi modal mở thì bảng không nhận click */
+body.dossier-modal-open .dossier-table-card,
+body.dossier-modal-open .dossier-toolbar,
+body.dossier-modal-open .healing-banner {
+    pointer-events: none;
+}
+
+
+/* Khóa cuộn trang nền */
+body.dossier-modal-open {
+    overflow: hidden !important;
+}
+
+/* Card tài khoản theo theme Sage */
+body.theme-sage .sidebar-user-card,
+body.theme-sage .account-panel,
+body.theme-sage .account-card,
+body.theme-sage .user-card {
+    background: linear-gradient(
+        135deg,
+        #66836d 0%,
+        #4f6957 100%
+    ) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    box-shadow: 0 10px 24px rgba(31, 55, 38, 0.22) !important;
+}
+
+body.theme-sage .sidebar-user-card button,
+body.theme-sage .account-panel button,
+body.theme-sage .account-card button,
+body.theme-sage .user-card button {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+body.theme-sage .sidebar-user-card button:hover,
+body.theme-sage .account-panel button:hover,
+body.theme-sage .account-card button:hover,
+body.theme-sage .user-card button:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Hàng bảng xen kẽ */
+body.theme-sage .dossier-table tbody tr:nth-child(even) td {
+    background: #f8faf7 !important;
+}
+
+body.theme-sage .dossier-table tbody tr:hover td {
+    background: #eaf2e8 !important;
+}
+
+body.theme-sage .dossier-table tbody td {
+    border-color: #dce5da !important;
+}
+
+/* =====================================================
+   THẺ THỐNG KÊ TỔNG QUAN HỒ SƠ
+   ===================================================== */
+
+.dossier-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(150px, 1fr)
+        );
+
+    gap: 11px;
+
+    margin:
+        0 0 14px 0;
+}
+
+
+/* Card chung */
+
+.dossier-summary-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    min-width: 0;
+
+    padding:
+        12px 14px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--app-border);
+
+    border-radius:
+        12px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--app-card) 91%,
+            transparent
+        );
+
+    box-shadow:
+        0 7px 20px
+        rgba(41, 61, 45, 0.055);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* Vạch màu bên trái */
+
+.dossier-summary-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 4px;
+
+    border-radius:
+        12px 0 0 12px;
+
+    background:
+        var(--summary-color);
+}
+
+
+/* Hover nhẹ */
+
+.dossier-summary-card:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--summary-color) 38%,
+            var(--app-border)
+        );
+
+    box-shadow:
+        0 11px 25px
+        rgba(41, 61, 45, 0.09);
+}
+
+
+/* Icon */
+
+.dossier-summary-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border-radius:
+        11px;
+
+    color:
+        var(--summary-color);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--summary-color) 13%,
+            var(--app-card)
+        );
+
+    font-size:
+        17px;
+
+    box-shadow:
+        inset 0 0 0 1px
+        color-mix(
+            in srgb,
+            var(--summary-color) 17%,
+            transparent
+        );
+}
+
+
+/* Nội dung */
+
+.dossier-summary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    min-width: 0;
+}
+
+
+.dossier-summary-label {
+    overflow: hidden;
+
+    color:
+        var(--app-text-muted);
+
+    font-size:
+        12px;
+    font-weight:
+        500;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.dossier-summary-number {
+    color:
+        var(--app-text);
+
+    font-size:
+        21px;
+    font-weight:
+        750;
+    line-height:
+        1.15;
+}
+
+
+/* =====================================================
+   MÀU RIÊNG TỪNG CARD
+   ===================================================== */
+
+/* Tổng hồ sơ */
+
+.dossier-summary-total {
+    --summary-color:
+        #718c73;
+}
+
+
+/* Chưa duyệt */
+
+.dossier-summary-pending {
+    --summary-color:
+        #d19a3d;
+}
+
+
+/* Đã bàn giao */
+
+.dossier-summary-delivered {
+    --summary-color:
+        #6d8eb1;
+}
+
+
+/* Đã thanh toán */
+
+.dossier-summary-paid {
+    --summary-color:
+        #5f9870;
+}
+
+
+/* =====================================================
+   HIỆU ỨNG KHI SỐ THAY ĐỔI
+   ===================================================== */
+
+.dossier-summary-number.is-updated {
+    animation:
+        dossierSummaryPop
+        0.32s ease;
+}
+
+
+@keyframes dossierSummaryPop {
+
+    0% {
+        transform:
+            scale(1);
+
+        opacity:
+            1;
+    }
+
+    45% {
+        transform:
+            scale(1.16);
+
+        opacity:
+            0.78;
+    }
+
+    100% {
+        transform:
+            scale(1);
+
+        opacity:
+            1;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1050px) {
+
+    .dossier-summary {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(150px, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 580px) {
+
+    .dossier-summary {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .dossier-summary-card {
+        padding:
+            11px 13px;
+    }
+
+}
+/* =====================================================
+   COMPACT LAYOUT - TỐI ƯU KHÔNG GIAN TRANG HỒ SƠ
+   Không thay đổi kích thước chữ chính
+   ===================================================== */
+
+
+/* =====================================================
+   1. GIẢM KHOẢNG TRỐNG TOÀN TRANG
+   ===================================================== */
+
+.dossier-page {
+    padding:
+        18px 20px 20px 20px !important;
+}
+
+
+/* =====================================================
+   2. THU GỌN PHẦN TIÊU ĐỀ
+   ===================================================== */
+
+.dossier-page-header {
+    align-items:
+        flex-start !important;
+
+    margin-bottom:
+        10px !important;
+}
+
+
+.dossier-page-header h1 {
+    margin:
+        0 0 3px 0 !important;
+
+    line-height:
+        1.15 !important;
+}
+
+
+.dossier-page-header p {
+    margin:
+        0 !important;
+
+    line-height:
+        1.3 !important;
+}
+
+
+.dossier-add-button {
+    height:
+        40px !important;
+
+    padding:
+        0 15px !important;
+
+    margin-top:
+        1px !important;
+}
+
+
+/* =====================================================
+   3. THU GỌN BANNER LỜI CHÀO
+   ===================================================== */
+
+.healing-banner {
+    min-height:
+        46px !important;
+
+    margin-bottom:
+        10px !important;
+
+    padding:
+        8px 13px !important;
+
+    gap:
+        9px !important;
+}
+
+
+.healing-banner-icon {
+    width:
+        32px !important;
+
+    height:
+        32px !important;
+
+    font-size:
+        16px !important;
+}
+
+
+.healing-banner-content {
+    gap:
+        1px !important;
+}
+
+
+.healing-banner-content strong {
+    line-height:
+        1.2 !important;
+}
+
+
+.healing-banner-content span {
+    line-height:
+        1.25 !important;
+}
+
+
+/* =====================================================
+   4. THU GỌN CÁC CARD THỐNG KÊ
+   ===================================================== */
+
+.dossier-summary {
+    gap:
+        8px !important;
+
+    margin-bottom:
+        10px !important;
+}
+
+
+.dossier-summary-card {
+    min-height:
+        54px !important;
+
+    padding:
+        8px 11px !important;
+
+    gap:
+        9px !important;
+
+    border-radius:
+        10px !important;
+}
+
+
+.dossier-summary-icon {
+    width:
+        34px !important;
+
+    height:
+        34px !important;
+
+    border-radius:
+        9px !important;
+
+    font-size:
+        15px !important;
+}
+
+
+.dossier-summary-content {
+    gap:
+        0 !important;
+}
+
+
+.dossier-summary-label {
+    line-height:
+        1.2 !important;
+}
+
+
+.dossier-summary-number {
+    font-size:
+        19px !important;
+
+    line-height:
+        1.05 !important;
+}
+
+
+/* =====================================================
+   5. THU GỌN THANH TÌM KIẾM VÀ BỘ LỌC
+   ===================================================== */
+
+.dossier-toolbar {
+    gap:
+        8px !important;
+
+    margin-bottom:
+        10px !important;
+
+    padding:
+        8px !important;
+
+    border-radius:
+        10px !important;
+}
+
+
+.dossier-search-box {
+    min-height:
+        38px !important;
+}
+
+
+.dossier-search-box input,
+.dossier-filter-grid select {
+    height:
+        38px !important;
+
+    min-height:
+        38px !important;
+}
+
+
+.dossier-search-box input {
+    padding-top:
+        0 !important;
+
+    padding-bottom:
+        0 !important;
+}
+
+
+.dossier-filter-grid {
+    gap:
+        8px !important;
+}
+
+
+/* =====================================================
+   6. GIẢM KHOẢNG TRỐNG TRƯỚC BẢNG
+   ===================================================== */
+
+.dossier-table-card {
+    margin-top:
+        0 !important;
+
+    border-radius:
+        11px !important;
+}
+
+
+.dossier-table-scroll {
+    padding-bottom:
+        4px !important;
+}
+
+
+/* =====================================================
+   7. THU GỌN CHIỀU CAO HÀNG
+   Giữ nguyên font-size hiện tại
+   ===================================================== */
+
+.dossier-table thead th {
+    padding-top:
+        8px !important;
+
+    padding-bottom:
+        8px !important;
+
+    line-height:
+        1.2 !important;
+}
+
+
+.dossier-table tbody td {
+    padding-top:
+        7px !important;
+
+    padding-bottom:
+        7px !important;
+
+    line-height:
+        1.25 !important;
+
+    vertical-align:
+        middle !important;
+}
+
+
+/* Badge gọn hơn một chút */
+
+.dossier-badge {
+    padding:
+        3px 7px !important;
+
+    line-height:
+        1.15 !important;
+}
+
+
+/* Nút sửa và xóa */
+
+.dossier-action-cell button {
+    width:
+        28px !important;
+
+    height:
+        28px !important;
+
+    margin:
+        1px !important;
+}
+
+
+/* =====================================================
+   8. CỐ ĐỊNH TIÊU ĐỀ BẢNG KHI CUỘN
+   ===================================================== */
+
+.dossier-table thead th {
+    position:
+        sticky !important;
+
+    top:
+        0 !important;
+
+    z-index:
+        5 !important;
+}
+
+
+.dossier-table thead th:last-child {
+    z-index:
+        8 !important;
+}
+
+
+/* =====================================================
+   9. CHO DỮ LIỆU CUỘN TRONG BẢNG
+   Giúp phần tiêu đề và thống kê luôn được nhìn thấy
+   ===================================================== */
+
+@media (min-width: 1001px) {
+
+    .dossier-table-scroll {
+        max-height:
+            520px !important;
+
+        overflow-x:
+            auto !important;
+
+        overflow-y:
+            auto !important;
+    }
+
+}
+
+
+/* =====================================================
+   10. MÀN HÌNH NHỎ
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .dossier-page {
+        padding:
+            14px !important;
+    }
+
+
+    .dossier-table-scroll {
+        max-height:
+            none !important;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .dossier-page-header {
+        gap:
+            10px !important;
+    }
+
+
+    .dossier-summary {
+        gap:
+            7px !important;
+    }
+
+
+    .healing-banner-content span {
+        overflow:
+            hidden;
+
+        white-space:
+            nowrap;
+
+        text-overflow:
+            ellipsis;
+    }
+
+}
+
+/* =====================================================
+   PHÂN TRANG HỒ SƠ
+   ===================================================== */
+
+.dossier-pagination {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 9px 12px;
+
+    border-top:
+        1px solid
+        var(--app-border);
+
+    background:
+        color-mix(
+            in srgb,
+            var(--app-card) 94%,
+            transparent
+        );
+}
+
+
+/* Số hồ sơ mỗi trang */
+
+.dossier-pagination-size {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color:
+        var(--app-text-muted);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.dossier-pagination-size select {
+    width: 62px !important;
+    height: 32px !important;
+
+    padding:
+        0 6px !important;
+
+    border-radius:
+        7px !important;
+
+    font-size:
+        12px !important;
+}
+
+
+/* Thông tin ở giữa */
+
+.dossier-pagination-info {
+    color:
+        var(--app-text-muted);
+
+    font-size: 12px;
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* Nhóm nút bên phải */
+
+.dossier-pagination-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+
+.dossier-pagination-buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        var(--app-border-strong);
+
+    border-radius:
+        7px;
+
+    color:
+        var(--app-text);
+
+    background:
+        var(--app-card);
+
+    font-size: 16px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.dossier-pagination-buttons button:hover:not(:disabled) {
+    color:
+        #ffffff;
+
+    background:
+        var(--app-primary);
+
+    border-color:
+        var(--app-primary);
+}
+
+
+.dossier-pagination-buttons button:disabled {
+    opacity: 0.38;
+    cursor: not-allowed;
+}
+
+
+/* Chọn số trang */
+
+.dossier-page-jump {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin:
+        0 3px;
+
+    color:
+        var(--app-text-muted);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+.dossier-page-jump select {
+    width: 58px !important;
+    height: 32px !important;
+
+    padding:
+        0 5px !important;
+
+    border-radius:
+        7px !important;
+
+    font-size:
+        12px !important;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .dossier-pagination {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .dossier-pagination-info {
+        grid-column:
+            1 / -1;
+
+        grid-row:
+            1;
+
+        text-align:
+            left;
+    }
+
+
+    .dossier-pagination-size {
+        grid-column:
+            1;
+    }
+
+
+    .dossier-pagination-buttons {
+        grid-column:
+            2;
+    }
+
+}
+
+
+@media (max-width: 620px) {
+
+    .dossier-pagination {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .dossier-pagination-info,
+    .dossier-pagination-size,
+    .dossier-pagination-buttons {
+        grid-column:
+            1;
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+    }
+
+}
+/* =====================================================
+   CỘT GIÁ TRỊ - KHÔNG XUỐNG DÒNG
+   ===================================================== */
+
+.dossier-col-value,
+.dossier-value-cell {
+    width: 125px !important;
+    min-width: 125px !important;
+    max-width: 125px !important;
+
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+
+    text-align: right !important;
+
+    font-variant-numeric: tabular-nums;
+}
+.dossier-table thead .dossier-col-value {
+    text-align: center !important;
+}
